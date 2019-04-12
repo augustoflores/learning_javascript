@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello World</title>
-    <!--JAVAscript rules-->
-</head>
-<body>
-    <h1>Hello World</h1>
 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hello World</title>
+        <!--JAVAscript rules-->
+    </head>
+
+    <body>
+        <script>
+            //Area del circulo
+            var diametro = 10;
+            var pi = 3.1416;
+            var area = pi * ((diametro / 2) ** 2);
+            console.log("Area: " + area);
+
+            //Promedio
+            var numero_uno = 60;
+            var numero_dos = 50;
+            var numero_tres = 40;
+            var sumatoria = numero_uno + numero_dos + numero_tres;
+            var elementos = 3;
+            var promedio = sumatoria / elementos;
+            console.log("Promedio: " + promedio);
+
+            //Numero menor o igual a 10
+            var numero = 3;
+            console.log("Menor o igual a 10: " + (numero <= 10));
+
+            //Numero positio
+            numero = -3;
+            console.log("Numero es positivo: " + (numero > 0));
+
+
+            // numero mayor que 10 y menor que 130
+            numero =138;
+            var resultado = numero >10 && numero<130;
+            console.log("Numero mayor que 10 y menor que 130:"+resultado);
+
+            // que dos numeros sean multiplos de 3
+            numero_uno= 30;
+            numero_dos= 14;
+            modulo_numero_uno = numero_uno % 3;
+            modulo_numero_dos = numero_dos % 3;
+            resultado= modulo_numero_uno==0 && modulo_numero_dos==modulo_numero_uno;
+            console.log("Que dos numeros sean multiplos de 3:"+resultado);
+
+        </script>
+    </body>
+
 </html>
