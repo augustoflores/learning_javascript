@@ -12,9 +12,57 @@
     <body>
         <script>
             // if--else
-            if(){
-                
+            if(1===1){
+                console.log("igual");
+            }else{
+                console.error("no es");
             }
+
+
+            // if--else..if
+            var number=3;
+            if(number===3){
+                console.log("es 3");
+            }else if(number===6){
+                console.log("es 6");
+            }else{
+                console.error("es otro");
+            }
+
+
+            //mi numero es multiplo de 13
+            var number=13;
+            if(number%13===0){
+                console.log("Si es multiplo");
+            }else{
+                console.error("No es multiplo");
+            }
+
+            //el producto de dos numeros es un numero par menor que 30, si no, es mayor o igual que 30 o menor de 50
+            var number_one=5;
+            var number_two=0;
+            var resultado= number_one*number_two;
+            if(resultado<30 && resultado%2===0){
+                console.log("par menor que 30");
+            }else if(resultado>=30  && resultado<=50 && resultado%2===0){
+                console.log("par mayor que 30 y menor de 50");
+            }else{
+                console.error("niguno de los anteriores");
+            }
+
+            /*
+            number_one=2;
+            number_two=26;
+            if(number_one*number_two<30 && number_one*number_two%2===0){
+                console.log("par menor que 30");
+            }else if(number_one*number_two>=30  && number_one*number_two<=50 && number_one*number_two%2===0){
+                console.log("par mayor que 30 y menor de 50");
+            }else{
+                console.error("niguno de los anteriores");
+            }
+            */
+
+
 
         </script>
     </body>
