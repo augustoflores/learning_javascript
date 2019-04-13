@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Dia 2: aun no me descubren..</title>
-        <!--JAVAscript rules-->
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dia 2: aun no me descubren..</title>
+    <!--JAVAscript rules-->
+</head>
 
-    <body>
-        <script>
-            // if--else
-            if(1===1){
-                console.log("igual");
-            }else{
-                console.error("no es");
+<body>
+    <script>
+        // if--else
+        if (1 === 1) {
+            console.log("igual");
+        } else {
+            console.error("no es");
+        }
+
+
+        // if--else..if
+        var number = 3;
+        if (number === 3) {
+            console.log("es 3");
+        } else if (number === 6) {
+            console.log("es 6");
+        } else {
+            console.error("es otro");
+        }
+
+
+        //mi numero es multiplo de 13
+        var number = 13;
+        if (number % 13 === 0) {
+            console.log("Si es multiplo");
+        } else {
+            console.error("No es multiplo");
+        }
+
+        //el producto de dos numeros es un numero par menor que 30, si no, es mayor o igual que 30 o menor de 50
+        var resultado = 3 * 13;
+        if (resultado < 30 && resultado % 2 === 0) {
+            console.log("par menor que 30");
+        } else if (resultado >= 30 && resultado <= 50 && resultado % 2 === 0) {
+            console.log("par mayor que 30 y menor de 50");
+        } else {
+            console.error("niguno de los anteriores");
+        }
+
+        //while hasta 100
+        var number = 0;
+        while (number < 100) {
+            if (number % 3 === 0) {
+                //console.log(number);
             }
+            number++;
+        }
 
+        //for
+        for (var index = 100; index >= 0; index--) {
+            //console.log(index);
+        }
 
-            // if--else..if
-            var number=3;
-            if(number===3){
-                console.log("es 3");
-            }else if(number===6){
-                console.log("es 6");
-            }else{
-                console.error("es otro");
+        //metodos string
+        var greeting = "Hello world";
+        console.log(greeting.length);
+
+        console.log(greeting.indexOf('w'));
+
+        //imprimir el numero de a en las sigueintes palabras
+
+        //swich ejercicio
+        //multiplos del 1 al 3 con un for
+        //hola
+        //array
+        //amarilla
+        //palindromo
+
+        var word = "Anastasia";
+        var total = 0;
+        for (var i = 0; i < word.length; i++) {
+            if (word[i].toLowerCase() === "a") {
+                total++;
             }
+        }
+        console.log("longitud: " + total);
 
+        var i=0;
+        while(word[i]){
+            i++
+        }
+        console.log(i);
 
-            //mi numero es multiplo de 13
-            var number=13;
-            if(number%13===0){
-                console.log("Si es multiplo");
-            }else{
-                console.error("No es multiplo");
-            }
-
-            //el producto de dos numeros es un numero par menor que 30, si no, es mayor o igual que 30 o menor de 50
-            //var number_one = 3;
-            //var number_two = 13;
-            var resultado = 3 * 13;
-            if(resultado < 30 && resultado % 2 === 0){
-                console.log("par menor que 30");
-            }else if(resultado >= 30  && resultado <= 50 && resultado%2 === 0){
-                console.log("par mayor que 30 y menor de 50");
-            }else{
-                console.error("niguno de los anteriores");
-            }
-
-
-
-
-
-        </script>
-    </body>
+    </script>
+</body>
 
 </html>
