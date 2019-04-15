@@ -92,6 +92,30 @@
         }
         console.log(i);
 
+
+        //input  ogoaag
+        //output AgAOOg
+        var word = "ogoaag";
+        var newWord = word.replace(/o/g, 'A');
+        newWord = newWord.replace(/a/g, 'O');
+        console.log("La palabra nueva es: "+newWord);
+
+
+
+
+        //checa si es un palindromo
+        var word = "Anita lava la tina";
+        var arrWord = word.split("");
+        var reverseWord = "";
+        for(var i = arrWord.length-1; i >= 0; i--){
+            reverseWord += word[i];
+        }
+        if(word.toLowerCase().replace(/ /g, '') === reverseWord.toLowerCase().replace(/ /g, '')){
+            console.log("es palindromo");
+        }else{
+            console.log("no es palindromo");
+        }
+
     </script>
 </body>
 
