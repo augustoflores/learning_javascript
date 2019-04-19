@@ -59,9 +59,6 @@ var koders_array = [{
         'Fotografia',
         'Viajar'
     ],
-    saluda : function(){
-        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
-    }
 },
 {
     'nombre': 'Jorge',
@@ -72,9 +69,7 @@ var koders_array = [{
         'Lectura',
         'Dibujar'
     ],
-    saluda : function(){
-        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
-    }
+
 },
 {
     'nombre': 'Erick',
@@ -84,9 +79,7 @@ var koders_array = [{
         'Caligrafia',
         'Videojuegos'
     ],
-    saluda : function(){
-        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
-    }
+
 },
 {
     'nombre': 'Diana',
@@ -96,9 +89,7 @@ var koders_array = [{
         'Hardware',
         'Videojuegos'
     ],
-    saluda : function(){
-        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
-    }
+
 },
 {
     'nombre': 'Rodo',
@@ -108,14 +99,22 @@ var koders_array = [{
         'Musica',
         'Programacion'
     ],
-    saluda : function(){
-        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(", ")
-    }
+
 }
 ]
+function Koder(nombre,edad,genero,hobbies) {
+    this.nombre= nombre
+    this.edad= edad
+    this.genero= genero
+    this.hobbies = hobbies
+    this.saluda = function(){
+        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
+    } 
+}
 
 koders_array.forEach(function (element) {
-    console.log(element.saluda())
+    var obj = new Koder(element.nombre,element.edad,element.genero,element.hobbies);
+    console.log(obj.saluda());
 })
 
 
@@ -138,6 +137,9 @@ function Car(color,brand,model,year){
     this.brand = brand;
     this.model = model;
     this.year = year;
+    this.getCar  = function () {
+        return this.brand + " " + this.model        
+    } 
 }
 var firstCar = new Car("Plata","Toyota","Avanza","2015");
 console.log(firstCar);
