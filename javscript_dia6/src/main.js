@@ -47,3 +47,97 @@ var persona_obj = {
     }
 }
 console.log(persona_obj.fullName())
+
+
+// 
+
+var koders_array = [{
+    'nombre': 'David',
+    'edad': 22,
+    'genero': 'M',
+    'hobbies': [
+        'Fotografia',
+        'Viajar'
+    ],
+    saluda : function(){
+        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
+    }
+},
+{
+    'nombre': 'Jorge',
+    'edad': 23,
+    'genero': 'M',
+    'hobbies': [
+        'Videojuegos',
+        'Lectura',
+        'Dibujar'
+    ],
+    saluda : function(){
+        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
+    }
+},
+{
+    'nombre': 'Erick',
+    'edad': 25,
+    'genero': 'M',
+    'hobbies': [
+        'Caligrafia',
+        'Videojuegos'
+    ],
+    saluda : function(){
+        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
+    }
+},
+{
+    'nombre': 'Diana',
+    'edad': 27,
+    'genero': 'F',
+    'hobbies': [
+        'Hardware',
+        'Videojuegos'
+    ],
+    saluda : function(){
+        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
+    }
+},
+{
+    'nombre': 'Rodo',
+    'edad': 32,
+    'genero': 'M',
+    'hobbies': [
+        'Musica',
+        'Programacion'
+    ],
+    saluda : function(){
+        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(", ")
+    }
+}
+]
+
+koders_array.forEach(function (element) {
+    console.log(element.saluda())
+})
+
+
+/*var persona_obj = {
+    'nombre': 'David',
+    'edad': 22,
+    'genero': 'M',
+    'hobbies': [
+        'Fotografia',
+        'Viajar'
+    ],
+    saluda : function(){
+        return "Hola soy " + this.nombre + " y mis hobbies son: " + this.hobbies.join(",")
+    }
+}
+console.log(persona_obj.saluda());*/
+
+function Car(color,brand,model,year){
+    this.color = color;
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+}
+var firstCar = new Car("Plata","Toyota","Avanza","2015");
+console.log(firstCar);
