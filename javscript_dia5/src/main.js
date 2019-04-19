@@ -123,5 +123,6 @@ console.log("Presentense: \n" + new_koders_array_hobbies.join("\n"))
 
 var new_koders_array_videojuegos = koders_array.filter(function (element) {
     return element.hobbies.includes("Videojuegos")
-})
-console.table(new_koders_array_videojuegos)
+}).forEach(function(element){
+    console.log(element.nombre)
+});
