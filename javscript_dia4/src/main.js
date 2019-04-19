@@ -31,6 +31,31 @@ console.log(capitalize("welcome to kodemia we have fun and games"));
 //output ovsh
 //7letras en el abecedario
 
+// var str = "abcedefghijklmnñopqrstuvwxyz";
+// var n = str.charCodeAt(0);
+//console.log(n);
+
+function letterToCesar(letter) {
+    letterCode=letter.charCodeAt(0)+7
+    //console.log(letterCode)
+    if(letterCode>129){
+        letterCode -= 25
+    }
+    return String.fromCharCode(letterCode)
+}
+function stringToCesar(text) {
+    new_string = ""
+    for(var i = 0; i < text.length; i++){
+        if(text[i]!=" "){
+            new_string += letterToCesar(text[i])
+        }else{
+            new_string += text[i]
+        }
+    }
+    return new_string
+}
+console.log(stringToCesar("hola"))
+
 //
 /*
     #
@@ -39,3 +64,18 @@ console.log(capitalize("welcome to kodemia we have fun and games"));
  ####
 #####
 */
+function triangulo(pisos){
+    var triangulo_str=""
+    for(var i = 0; i < pisos; i++){
+        var char=" "
+        for (let ii = 0; ii < pisos; ii++) {
+            if(ii === pisos-(i+1)){
+                char = "#"
+            }
+            triangulo_str += char  
+        }
+        triangulo_str += "\n"
+    }
+    return triangulo_str
+}
+console.log(triangulo(7))
