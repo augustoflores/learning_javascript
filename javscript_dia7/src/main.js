@@ -57,3 +57,46 @@ persons_data.forEach(function (element) {
     var obj = new Persona(element.nombre,element.apPaterno,element.apMaterno,element.fechNacimiento,element.genero);
     console.log(obj.getCurp());
 })
+//5 objetoss divs
+
+var divs_data_array=[
+    {
+        'height':'100px',
+        'width':'30px',
+        'backgroundColor':'peru'
+    },
+    {
+        'height':'100px',
+        'width':'90px',
+        'backgroundColor':'red'
+    },
+    {
+        'height':'100px',
+        'width':'30px',
+        'backgroundColor':'green'
+    },
+    {
+        'height':'100px',
+        'width':'40px',
+        'backgroundColor':'black'
+    },
+    {
+        'height':'100px',
+        'width':'130px',
+        'backgroundColor':'blue',
+        'position':'absolute',
+        'right':0,
+        'top':0
+    }
+]
+
+
+console.log(document.getElementsByTagName("div"));
+
+var i = 0;
+for (let item of document.getElementsByTagName("div")) {
+    Object.entries(divs_data_array[i]).forEach(function (element,index) {
+        item.style[element[0]]= element[1];
+    });
+    i++;
+}
