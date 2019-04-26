@@ -1,112 +1,52 @@
 
 
-
-var node_obj=[
-    {
-        "tag":"div",
-        "childs":[
-            {
-                "tag":"h2",
-                "text":"hello one"
-            },
-            {
-                "tag":"h2",
-                "text":"hello one"
-            },
-            {
-                "tag":"h2",
-                "text":"hello one"
-            },
-        ]
-    },
-    {
-        "tag":"div",
-        "childs":[
-            {
-                "tag":"h3",
-                "text":"hello two"
-            },
-            {
-                "tag":"h3",
-                "text":"hello two"
-            },
-            {
-                "tag":"h3",
-                "text":"hello two"
-            },
-        ]
-    },
-    {
-        "tag":"div",
-        "childs":[
-            {
-                "tag":"h4",
-                "text":"hello three"
-            },
-            {
-                "tag":"h4",
-                "text":"hello three"
-            },
-            {
-                "tag":"h4",
-                "text":"hello three"
-            },
-        ]
-    },
-    {
-        "tag":"ol",
-        "childs":[
-            {
-                "tag":"li",
-                "text":"hello four"
-            },
-            {
-                "tag":"li",
-                "text":"hello four"
-            },
-            {
-                "tag":"li",
-                "text":"hello four"
-            },
-        ]
-    }
-];
-
-node_obj.forEach(function (item) {
-    var node = document.createElement(item.tag);
-    item.childs.forEach(function (childitem) {
-        var child_item= document.createElement(childitem.tag);
-        var child_text= document.createTextNode(childitem.text);
-        child_item.appendChild(child_text);
-        node.appendChild(child_item);
-    })
-   document.getElementsByTagName("body")[0].appendChild(node);
-}); 
-    
-var obj={
-    "tag":"div",
-    "childs":[
+var nodeObj = {
+    "tag": "div",
+    "children": [
         {
-            "tag":"h2",
-            "text":"hello four"
+            "tag": "h2",
+            "text": "Hello"
         },
         {
-            "tag":"h2",
-            "text":"hello fourfdsfsd"
+          "tag": "h2",
+          "text": "World"
         },
         {
-            "tag":"h2",
-            "text":"hello ana"
+          "tag": "p",
+          "text": "holi"
         },
+        {
+          "tag": "span",
+          "text": "ontas?"
+        }
     ]
-}
-
-
-var node = document.createElement(obj.tag);
-obj.childs.forEach(function (childitem) {
-    var child_item= document.createElement(childitem.tag);
-    var child_text= document.createTextNode(childitem.text);
-    child_item.appendChild(child_text);
-    node.appendChild(child_item);
-})
-//document.getElementsByTagName("body")[0].appendChild(node);
+  }
+  
+  
+  function createParent(tag) {
+    return document.createElement(tag)
+  }
+  
+  function createChild(child) {
+    var element = document.createElement(child.tag)
+    var textElement = document.createTextNode(child.text)
+    element.appendChild(textElement)
+    return element
+  }
+  
+  function buildStructure(nodeObj) {
+    var parentNode = createParent(nodeObj.tag)
+    nodeObj.children.forEach(function(child) {
+        var childNode = createChild(child)
+        parentNode.appendChild(childNode)
+    })
+    return parentNode
+  }
+  
+  function init() {
+    var structureNode = buildStructure(nodeObj)
+    var bodyNode = document.querySelectorAll('body')[0]
+    bodyNode.appendChild(structureNode)
+  }
+  
+  init()
