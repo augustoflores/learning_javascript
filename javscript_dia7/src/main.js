@@ -57,6 +57,8 @@ persons_data.forEach(function (element) {
     var obj = new Persona(element.nombre,element.apPaterno,element.apMaterno,element.fechNacimiento,element.genero);
     console.log(obj.getCurp());
 })
+
+
 //5 objetoss divs
 
 var divs_data_array=[
